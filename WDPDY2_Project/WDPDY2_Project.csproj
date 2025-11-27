@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\css\Assets_Georgi\" />
+  </ItemGroup>
+
 </Project>

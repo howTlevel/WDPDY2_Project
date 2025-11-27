@@ -1,1 +1,99 @@
-﻿
+﻿@{
+    ViewBag.Title = "Welcome to Coffee Haven";
+    Layout = null; // If you have a layout, use it here
+}
+<style>
+    /* site.css */
+
+    /* General Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        background-color: #f8f9fa;
+    }
+
+    /* Header Styles */
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    /* Jumbotron Styles */
+    .jumbotron {
+        background: #ffffff; /* White background for the jumbotron */
+        padding: 30px;
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .jumbotron h2 {
+            color: #343a40; /* Dark text color */
+        }
+
+        .jumbotron p {
+            font-size: 1.2em;
+        }
+
+    /* Card Styles */
+    .card {
+        border: dotted; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+    }
+
+        .card img {
+            border-radius: 5px 5px 0 0; /* Rounded corners on the image */
+            max-height: 200px;
+            object-fit: cover; /* Ensure image covers the area */
+        }
+
+    .card-title {
+        font-size: 1.5em;
+    }
+
+    .card-text {
+        color: #6c757d; /* Gray text color */
+    }
+
+
+</style>
+
+<div class="jumbotron text-center">
+    <h2>Welcome to Your Coffee Wonderland</h2>
+    <p>Explore our finest selection of coffee beans from around the world.</p>
+    <a class="btn btn-primary" href="@Url.Action("Products", "Coffee")">Shop Now</a>
+</div>
+
+<section class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <img src="~/css/Assets_Georgi/Espresso.jpg" class="card-img-top" alt="Coffee Type 1" />
+            <div class="card-body">
+                <h5 class="card-title">Espresso</h5>
+                <p class="card-text">Rich and bold coffee for the true connoisseur.</p>
+                <a href="@Url.Action("Details", "Coffee", new { id = 1 })" class="btn btn-secondary">View Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="~/css/Assets_Georgi/Latte.jpeg" class="card-img-top" alt="Coffee Type 2" />
+            <div class="card-body">
+                <h5 class="card-title">Latte</h5>
+                <p class="card-text">Smooth and creamy coffee perfect for any hour.</p>
+                <a href="@Url.Action("Details", "Coffee", new { id = 2 })" class="btn btn-secondary">View Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="~/css/Assets_Georgi/Cappuccino.jpg" class="card-img-top" alt="Coffee Type 3" />
+            <div class="card-body">
+                <h5 class="card-title">Cappuccino</h5>
+                <p class="card-text">A perfect balance of espresso, steamed milk, and foamed milk.</p>
+                <a href="@Url.Action("Details", "Coffee", new { id = 3 })" class="btn btn-secondary">View Details</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
