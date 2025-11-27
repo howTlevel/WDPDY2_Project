@@ -3,17 +3,23 @@
 }
 
 @section Styles {
-    <!-- Your personal CSS file -->
     <link rel="stylesheet" href="~/css/Nivi.css" asp-append-version="true" />
 }
 
 <main class="nivi-page">
 
+    <!-- TOP INTRO STRIP -->
+    <section class="nivi-intro-bar">
+        <p>
+            You’re viewing <strong>GG Master </strong> for the Bean &amp; Brews project.
+        </p>
+    </section>
+
     <!-- HERO SECTION -->
     <section class="nivi-hero">
         <div class="nivi-hero-content">
             <h1 class="nivi-title">
-                Welcome to <span>Bean & Brews</span>
+                Welcome to <span>Bean &amp; Brews</span>
             </h1>
             <p class="nivi-subtitle">
                 Designed by Nivi – where good design meets good coffee.
@@ -31,23 +37,39 @@
             <p class="nivi-tagline">
                 ☕ Earn rewards, save your favourite drinks and pre-order in seconds.
             </p>
+
+            <!-- small stats strip -->
+            <div class="nivi-stats">
+                <div class="nivi-stat">
+                    <span class="nivi-stat-number">20+</span>
+                    <span class="nivi-stat-label">Drinks on the menu</span>
+                </div>
+                <div class="nivi-stat">
+                    <span class="nivi-stat-number">3</span>
+                    <span class="nivi-stat-label">Local branches</span>
+                </div>
+                <div class="nivi-stat">
+                    <span class="nivi-stat-number">5★</span>
+                    <span class="nivi-stat-label">Student-rated</span>
+                </div>
+            </div>
         </div>
 
-        <div class="nivi-hero-card">
+        <aside class="nivi-hero-card" aria-label="Today’s special coffee">
             <h2>Today’s Special</h2>
             <p class="nivi-special-name">Caramel Vanilla Latte</p>
             <p class="nivi-special-desc">
                 Double-shot espresso, steamed milk and a smooth caramel-vanilla swirl.
             </p>
             <p class="nivi-special-note">
-                Hand-picked by <strong>Nivi</strong> for this assignment.
+                Hand-picked by <strong>Nivi</strong> for this.
             </p>
-        </div>
+        </aside>
     </section>
 
     <!-- FEATURE CARDS -->
-    <section class="nivi-features">
-        <h2 class="nivi-section-title">Why our site is different</h2>
+    <section class="nivi-features" aria-labelledby="features-heading">
+        <h2 id="features-heading" class="nivi-section-title">Why my site is different</h2>
 
         <div class="nivi-feature-grid">
 
@@ -78,6 +100,25 @@
         </div>
     </section>
 
+    <!-- RECOMMENDED DRINKS ROW -->
+    <section class="nivi-menu-preview" aria-labelledby="menu-preview-heading">
+        <h2 id="menu-preview-heading" class="nivi-section-title">Signature drinks</h2>
+        <div class="nivi-menu-grid">
+            <article class="nivi-menu-item">
+                <h3>Mocha Dream</h3>
+                <p>Rich chocolate, smooth espresso and steamed milk.</p>
+            </article>
+            <article class="nivi-menu-item">
+                <h3>Oat Milk Flat White</h3>
+                <p>Velvety texture with a nutty finish – dairy-free favourite.</p>
+            </article>
+            <article class="nivi-menu-item">
+                <h3>Iced Caramel Brew</h3>
+                <p>Cold-brew coffee with caramel and crushed ice.</p>
+            </article>
+        </div>
+    </section>
+
     <!-- BOTTOM CTA / FOOTER STRIP -->
     <section class="nivi-cta">
         <div class="nivi-cta-inner">
@@ -90,7 +131,7 @@
             </a>
         </div>
         <p class="nivi-credit">
-            Designed &amp; coded by <strong>Nivi</strong> – Group project, Bean & Brews.
+            Designed &amp; coded by <strong>Nivi</strong> – Bean &amp; Brews.
         </p>
     </section>
 

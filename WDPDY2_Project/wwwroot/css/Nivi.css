@@ -164,3 +164,89 @@
         font-size: 2.4rem;
     }
 }
+
+/* Intro bar at the very top of the page */
+.nivi-intro-bar {
+    background: #fff7ef;
+    border-radius: 999px;
+    padding: 0.6rem 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #6b4a2b;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+/* Stats row under hero text */
+.nivi-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.nivi-stat {
+    min-width: 110px;
+}
+
+.nivi-stat-number {
+    display: block;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #b4692b;
+}
+
+.nivi-stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Menu preview section */
+.nivi-menu-preview {
+    margin-top: 3rem;
+}
+
+.nivi-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.nivi-menu-item {
+    padding: 1.3rem 1.4rem;
+    border-radius: 1.25rem;
+    background: #faf6f2;
+    border: 1px solid #f0e0d0;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+    .nivi-menu-item h3 {
+        margin-bottom: 0.4rem;
+        font-size: 1.05rem;
+    }
+
+    .nivi-menu-item p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+    .nivi-menu-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+/* Make new bits stack nicely on mobile */
+@media (max-width: 768px) {
+    .nivi-stats {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .nivi-intro-bar {
+        border-radius: 0.75rem;
+    }
+}
+
+/* End of Nivi.css */
