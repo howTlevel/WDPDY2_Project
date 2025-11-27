@@ -34,6 +34,11 @@ namespace WDPDY2_Project.Controllers
         {
             return View();
         }
+        public IActionResult Georgi()
+        {
+            return View();
+        }
+
         public IActionResult Kenz()
         {
             return View();
