@@ -1,53 +1,97 @@
 ﻿@{
-    ViewBag.Title = "Nivi's Dashboard";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Nivi | Bean & Brews";
 }
 
-<div class="container mt-5">
-    <!-- Header Section -->
-    <div class="text-center mb-4">
-        <h1 class="display-4 text-primary">Welcome to the GG Group</h1>
-        <p class="lead text-muted">Personalized Page</p>
-    </div>
+@section Styles {
+    <!-- Your personal CSS file -->
+    <link rel="stylesheet" href="~/css/Nivi.css" asp-append-version="true" />
+}
 
-    <!-- Card Section -->
-    <div class="row">
-        <!-- Card 1 -->
-        <div class="col-md-4 mb-4">
-            <div class="card shadow-sm">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Profile</h5>
-                    <p class="card-text">IDK WHY are you still here.</p>
-                    <a href="@Url.Action("Profile", "Account")" class="btn btn-primary">View Profile</a>
-                </div>
+<main class="nivi-page">
+
+    <!-- HERO SECTION -->
+    <section class="nivi-hero">
+        <div class="nivi-hero-content">
+            <h1 class="nivi-title">
+                Welcome to <span>Bean & Brews</span>
+            </h1>
+            <p class="nivi-subtitle">
+                Designed by Nivi – where good design meets good coffee.
+            </p>
+
+            <div class="nivi-hero-buttons">
+                <a asp-controller="Account" asp-action="Register" class="nivi-btn nivi-btn-primary">
+                    Create an account
+                </a>
+                <a asp-controller="Account" asp-action="Login" class="nivi-btn nivi-btn-outline">
+                    I already have an account
+                </a>
             </div>
+
+            <p class="nivi-tagline">
+                ☕ Earn rewards, save your favourite drinks and pre-order in seconds.
+            </p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="col-md-4 mb-4">
-            <div class="card shadow-sm">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Messages</h5>
-                    <p class="card-text">Check your latest notifications and messages.</p>
-                    <a href="@Url.Action("Index", "Messages")" class="btn btn-primary">View Messages</a>
-                </div>
-            </div>
+        <div class="nivi-hero-card">
+            <h2>Today’s Special</h2>
+            <p class="nivi-special-name">Caramel Vanilla Latte</p>
+            <p class="nivi-special-desc">
+                Double-shot espresso, steamed milk and a smooth caramel-vanilla swirl.
+            </p>
+            <p class="nivi-special-note">
+                Hand-picked by <strong>Nivi</strong> for this assignment.
+            </p>
         </div>
+    </section>
 
-        <!-- Card 3 -->
-        <div class="col-md-4 mb-4">
-            <div class="card shadow-sm">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Settings</h5>
-                    <p class="card-text">Customize your experience and preferences.</p>
-                    <a href="@Url.Action("Index", "Settings")" class="btn btn-primary">View Settings</a>
-                </div>
-            </div>
+    <!-- FEATURE CARDS -->
+    <section class="nivi-features">
+        <h2 class="nivi-section-title">Why our site is different</h2>
+
+        <div class="nivi-feature-grid">
+
+            <article class="nivi-feature-card">
+                <h3>Personal Dashboard</h3>
+                <p>
+                    When you log in, you’ll see your favourite drinks, recent orders
+                    and loyalty points all in one place.
+                </p>
+            </article>
+
+            <article class="nivi-feature-card">
+                <h3>Smart Ordering</h3>
+                <p>
+                    Re-order your usual drink with a single click and pick it up
+                    without waiting in the queue.
+                </p>
+            </article>
+
+            <article class="nivi-feature-card">
+                <h3>Student-Friendly</h3>
+                <p>
+                    Built as part of our web development project – clean code,
+                    responsive layout and easy to extend.
+                </p>
+            </article>
+
         </div>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="text-center mt-5 text-muted">
-        <p>&copy; @DateTime.Now.Year - Nivi's Page</p>
-    </footer>
-</div>
+    <!-- BOTTOM CTA / FOOTER STRIP -->
+    <section class="nivi-cta">
+        <div class="nivi-cta-inner">
+            <div>
+                <h2>Ready for your first brew?</h2>
+                <p>Register now and get a digital loyalty card from your very first order.</p>
+            </div>
+            <a asp-controller="Account" asp-action="Register" class="nivi-btn nivi-btn-primary">
+                Get started
+            </a>
+        </div>
+        <p class="nivi-credit">
+            Designed &amp; coded by <strong>Nivi</strong> – Group project, Bean & Brews.
+        </p>
+    </section>
+
+</main>
