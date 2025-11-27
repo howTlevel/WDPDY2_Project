@@ -1,5 +1,53 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewBag.Title = "Nivi's Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<div class="container mt-5">
+    <!-- Header Section -->
+    <div class="text-center mb-4">
+        <h1 class="display-4 text-primary">Welcome to the GG Group</h1>
+        <p class="lead text-muted">Personalized Page</p>
+    </div>
+
+    <!-- Card Section -->
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Profile</h5>
+                    <p class="card-text">IDK WHY are you still here.</p>
+                    <a href="@Url.Action("Profile", "Account")" class="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Messages</h5>
+                    <p class="card-text">Check your latest notifications and messages.</p>
+                    <a href="@Url.Action("Index", "Messages")" class="btn btn-primary">View Messages</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Settings</h5>
+                    <p class="card-text">Customize your experience and preferences.</p>
+                    <a href="@Url.Action("Index", "Settings")" class="btn btn-primary">View Settings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5 text-muted">
+        <p>&copy; @DateTime.Now.Year - Nivi's Page</p>
+    </footer>
+</div>
