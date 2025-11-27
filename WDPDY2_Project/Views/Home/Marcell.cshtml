@@ -2,16 +2,38 @@
 @model WDPDY2_Project.Views.Home.MarcellModel
 @{
 }
-<style>
-    h1 {
-        font-family: 'Adobe Arabic';
-    }
 
-    h2 {
-        font-family: 'Adobe Arabic';
-        font-size:20px;
-    }
-</style>
-<h1>¡Hola!</h1>
+<link rel="stylesheet" type="text/css" href="~/css/Marcell.css" />
 
-<h2>¿Cuánto control tienes sobre tu vida? ¿Está todo predeterminado o tenemos libre albedrío?</h2>
+<header>
+    <div class="banner">
+        <img src="~/css/Images/MF_banner.jpg" alt="Banner" class="banner-image" />
+        <h1>¡Hola!</h1>
+        <h2>¿Cuánto control tienes sobre tu vida? ¿Está todo predeterminado o tenemos libre albedrío?</h2>
+    </div>
+</header>
+
+<main>
+    <section id="about">
+        <h2>Sobre Nosotros</h2>
+        <p>Este es un breve resumen sobre lo que hacemos y cómo podemos ayudarte.</p>
+    </section>
+
+    <section id="services">
+        <h2>Nuestros Servicios</h2>
+        <ul>
+            <li>Sevrvice 1</li>
+            <li>Servicio 2</li>
+            <li>Servicio 3</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contáctanos</h2>
+        <p>Email: info@example.com</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Mi Página de Índice. Todos los derechos reservados.</p>
+</footer>

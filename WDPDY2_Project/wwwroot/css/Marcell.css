@@ -1,0 +1,50 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.banner {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+h1 {
+    margin: 15px 0;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    position: relative; /* Change to fixed if you want it at the bottom of the viewport */
+    width: 100%;
+}
