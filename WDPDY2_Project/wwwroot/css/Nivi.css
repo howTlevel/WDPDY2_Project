@@ -29,19 +29,41 @@
    HERO SECTION
 ---------------------------------------------------- */
 .nivi-hero {
+    position: relative;
     display: grid;
     grid-template-columns: 2fr 1.2fr;
     gap: 2.5rem;
     align-items: center;
     margin-bottom: 4rem;
-    /* OPTIONAL HERO BACKGROUND IMAGE */
     background-image: url('images/cozy_cafe.jpg');
     background-size: cover;
     background-position: center;
     padding: 3rem;
     border-radius: 1.5rem;
-    color: #2c1a0c;
+    color: #fff; /* Force white text */
+    overflow: hidden;
 }
+
+    /* Dark overlay */
+    .nivi-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.45); /* Adjust darkness: 0.3–0.6 */
+        border-radius: inherit;
+        z-index: 1;
+    }
+
+/* Make actual content appear ABOVE the overlay */
+.nivi-hero-content,
+.nivi-hero-card {
+    position: relative;
+    z-index: 2;
+}
+
 
 .nivi-title {
     font-size: 3rem;
