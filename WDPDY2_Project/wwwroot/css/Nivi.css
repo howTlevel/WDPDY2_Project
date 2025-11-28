@@ -297,4 +297,20 @@
     }
 }
 
+.nivi-menu-item img:hover {
+    transform: scale(1.08);
+    transition: 0.2s ease;
+}
+
+.nivi-menu-preview {
+    background: linear-gradient(to bottom, #fff7ef, #ffffff);
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.nivi-menu-item img {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
 /* End of Nivi.css */
