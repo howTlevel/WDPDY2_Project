@@ -35,7 +35,7 @@
     align-items: center;
     margin-bottom: 4rem;
     /* OPTIONAL HERO BACKGROUND IMAGE */
-    background-image: url('/images/hero-coffee.jpg'); /* replace with your own */
+    background-image: url('images/cozy_cafe.jpg');
     background-size: cover;
     background-position: center;
     padding: 3rem;
