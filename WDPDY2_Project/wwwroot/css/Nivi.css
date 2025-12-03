@@ -1,6 +1,6 @@
-/* ----------------------------------------------------
+/* 
    GLOBAL PAGE LAYOUT
----------------------------------------------------- */
+*/
 .nivi-page {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     max-width: 1100px;
@@ -11,9 +11,9 @@
     box-shadow: 0 14px 40px rgba(0,0,0,0.06);
 }
 
-/* ----------------------------------------------------
-   INTRO BAR
----------------------------------------------------- */
+/* 
+    INTRO BAR
+*/
 .nivi-intro-bar {
     background: #fff7ef;
     border-radius: 999px;
@@ -25,9 +25,9 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.04);
 }
 
-/* ----------------------------------------------------
+/* 
    HERO SECTION
----------------------------------------------------- */
+ */
 .nivi-hero {
     position: relative;
     display: grid;
@@ -55,7 +55,7 @@
         z-index: 1;
     }
 
-/* Make actual content appear ABOVE the overlay */
+/* Make actual content appear ABOVE     overlay */
 .nivi-hero-content,
 .nivi-hero-card {
     position: relative;
@@ -82,7 +82,7 @@
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* CTA buttons inside hero */
+
 .nivi-hero-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -96,9 +96,9 @@
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* ----------------------------------------------------
+/*
    BUTTONS
----------------------------------------------------- */
+*/
 .nivi-btn {
     padding: 0.8rem 1.6rem;
     border-radius: 999px;
@@ -130,9 +130,9 @@
         color: #fff;
     }
 
-/* ----------------------------------------------------
+/* 
    HERO CARD
----------------------------------------------------- */
+ */
 .nivi-hero-card {
     background: rgba(255, 247, 239, 0.95);
     border-radius: 1.5rem;
@@ -161,9 +161,9 @@
     color: #6b5d55;
 }
 
-/* ----------------------------------------------------
+/* 
    STATS ROW
----------------------------------------------------- */
+ */
 .nivi-stats {
     display: flex;
     flex-wrap: wrap;
