@@ -35,7 +35,7 @@
     gap: 2.5rem;
     align-items: center;
     margin-bottom: 4rem;
-    /* hero background image - adjust path if needed */
+    /* hero background image - */
     background-image: url('images/cozy_cafe.jpg');
     background-size: cover;
     background-position: center;
@@ -50,12 +50,12 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.45); /* 0.3–0.6 depending how dark you want */
+        background: rgba(0, 0, 0, 0.45); /* 0.3–0.6 Dark adjesment  */
         border-radius: inherit;
         z-index: 1;
     }
 
-/* Make actual content appear ABOVE     overlay */
+/* actual content appear ABOVE     overlay */
 .nivi-hero-content,
 .nivi-hero-card {
     position: relative;
