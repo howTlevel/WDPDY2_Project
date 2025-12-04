@@ -1,31 +1,46 @@
 ﻿body {
-    font-family: Arial, sans-serif;
+    font-family: 'Adobe Arabic';
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
 
+h1 {
+    font-family: 'Adobe Arabic';
+}
+
+h2 {
+    font-family: 'Adobe Arabic';
+}
+
 .banner {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    height: 100px; /* Set height for a thin banner */
 }
 
 .banner-image {
     width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
+    height: 100%; /* Ensure the image fills the banner height */
+    object-fit: fill; /* Maintain image aspect ratio */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
 }
 
 h1 {
-    margin: 15px 0;
+    margin: 5px 0;
 }
 
 h2 {
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 main {
@@ -43,8 +58,7 @@ section {
 footer {
     text-align: center;
     padding: 10px;
-    background: #333;
+    background: #7a482c; /* Matching footer color */
     color: #fff;
-    position: relative; /* Change to fixed if you want it at the bottom of the viewport */
     width: 100%;
 }
