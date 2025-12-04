@@ -27,7 +27,7 @@ namespace WDPDY2_Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                string query = "INSERT INTO Users (Username, Password, RoleID) VALUES (@Username, @Password, @RoleID)";
+                string query = "INSERT INTO [Users] (Username, Password, RoleID) VALUES (@Username, @Password, @RoleID)";
 
                 using (SqlConnection conn = new SqlConnection(_connectionString))
                 {
@@ -64,7 +64,7 @@ namespace WDPDY2_Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
+                string query = "SELECT COUNT(*) FROM [Users] WHERE Username = @Username AND Password = @Password";
 
                 using (SqlConnection conn = new SqlConnection(_connectionString))
                 {
