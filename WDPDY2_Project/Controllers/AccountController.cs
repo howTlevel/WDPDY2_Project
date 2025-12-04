@@ -27,7 +27,7 @@ namespace WDPDY2_Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                string query = "INSERT INTO [Users] (Username, Password, RoleID) VALUES (@Username, @Password, @RoleID)";
+                string query = "INSERT INTO [Users] (Username, Password) VALUES (@Username, @Password)";
 
                 using (SqlConnection conn = new SqlConnection(_connectionString))
                 {
@@ -36,7 +36,6 @@ namespace WDPDY2_Project.Controllers
                     {
                         cmd.Parameters.AddWithValue("@Username", model.Username);
                         cmd.Parameters.AddWithValue("@Password", model.Password);
-                        cmd.Parameters.AddWithValue("@RoleID", model.RoleID);
 
                         try
                         {

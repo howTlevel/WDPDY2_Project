@@ -1,16 +1,28 @@
-﻿@model User
+﻿@model WDPDY2_Project.Models.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+<link rel="stylesheet" type="text/css" href="~/css/Register.css" />
 
-<form asp-action="Register" method="post">
-    <div>
-        <label asp-for="Username"></label>
-        <input asp-for="Username" />
-        <span asp-validation-for="Username"></span>
-    </div>
-    <div>
-        <label asp-for="Password"></label>
-        <input asp-for="Password" type="password" />
-        <span asp-validation-for="Password"></span>
-    </div>
-    
-    <button type="submit">Register</button>
-</form>
+<h2>@ViewData["Title"]</h2>
+
+<div class="form-container">
+    <form asp-action="Register" method="post">
+        <div class="form-group">
+            <label asp-for="Username"></label>
+            <input asp-for="Username" />
+            <span asp-validation-for="Username"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" type="password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ConfirmPassword"></label>
+            <input asp-for="ConfirmPassword" type="password" />
+            <span asp-validation-for="ConfirmPassword"></span>
+        </div>
+        <button type="submit" class="btn">Register</button>
+    </form>
+</div>
