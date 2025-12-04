@@ -5,21 +5,107 @@
 <link rel="stylesheet" href="~/css/profile.css" />
 
 <div class="container mt-4">
-    <div class="p-4 border rounded shadow-sm">
-        <h2 class="mb-3">Hello, welcome gang! 👋 Let's crash the chapter</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body text-center">
+                    <img id="avatarPreview" src="~/images/default-avatar.png" alt="Avatar" class="rounded-circle mb-3" style="width:120px;height:120px;object-fit:cover;">
+                    <h4 id="displayName">Hello, welcome gang! 👋</h4>
 
-        <p class="lead">
-            Just a page.
-        </p>
+                    <form id="avatarForm" method="post" enctype="multipart/form-data" asp-controller="Profile" asp-action="UploadAvatar">
+                        <div class="mb-2">
+                            <input type="file" name="avatar" id="avatarInput" accept="image/*" class="form-control form-control-sm" />
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-primary">Upload Avatar</button>
+                    </form>
 
-        <p>
-            Working on it — please be patient! Thank you.
-        </p>
+                    <hr />
 
-        <hr />
+                    <div class="text-start">
+                        <p class="mb-1"><strong>Email:</strong> <span id="email">email@example.com</span></p>
+                        <p class="mb-1"><strong>Member since:</strong> <span id="memberSince">May 2025</span></p>
+                        <p class="mb-0"><strong>Status:</strong> <span class="badge bg-success">Active</span></p>
+                    </div>
+                </div>
+            </div>
 
-        <p class="text-muted">
-            Thank you — have a coffee ☕
-        </p>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Quick actions</h5>
+                    <div class="d-grid gap-2">
+                        <a href="#" class="btn btn-outline-secondary btn-sm">Edit profile</a>
+                        <a href="#" class="btn btn-outline-danger btn-sm">Sign out</a>
+                        <a href="#" class="btn btn-outline-info btn-sm">Account settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h2 class="mb-3">Hello, welcome gang! 👋 Let's crash the chapter</h2>
+
+                    <p class="lead" id="Preview">Just a page.</p>
+
+                    <p id="longIntro">Working on it — please be patient! Thank you.</p>
+
+                    <hr />
+
+                    <p class="text-muted">Thank you — have a coffee ☕</p>
+
+                    <hr />
+
+                    <h5>About</h5>
+                    <form id="bioForm" method="post" asp-controller="Profile" asp-action="UpdateBio" class="mb-3">
+                        <div class="mb-2">
+                            <textarea id="bioInput" name="bio" class="form-control" rows="4">Just a page.</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm">Save bio</button>
+                    </form>
+
+                    <h5 class="mt-4">Recent activity</h5>
+                    <ul class="list-group" id="activityList">
+                        <li class="list-group-item">Joined the game — <small class="text-muted">2 months ago</small></li>
+                        <li class="list-group-item">Posted: "First draft" — <small class="text-muted">3 weeks ago</small></li>
+                        <li class="list-group-item">Commented on — <small class="text-muted">1 week ago</small></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5>Preferences</h5>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                        <label class="form-check-label" for="emailNotifications">Email notifications</label>
+                        <label class="form-check-label" for="smsnotification">SMS Notification</label> 
+                    </div>
+                    <div class="form-check form-switch mt-2">
+                        <input class="form-check-type="checkbox" id="darkModeToggle">
+                        <label class="form-check-label" for="darkModeToggle">Enable dark mode</label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+    // Preview avatar before upload
+    document.getElementById('avatarInput')?.addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const url = URL.createObjectURL(file);
+        document.getElementById('avatarPreview').src = url;
+    });
+
+    // Toggle dark mode
+    document.getElementById('darkModeToggle')?.addEventListener('change', function (e) {
+        if (e.target.checked) {
+            document.documentElement.classList.add('dark-mode');
+        } else {
+            document.documentElement.classList.remove('dark-mode');
+        }
+    });
+</script>
