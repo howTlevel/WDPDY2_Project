@@ -1,19 +1,82 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using WDPDY2_Project.Models;
+using Microsoft.Extensions.Configuration;
+
+using Microsoft.Data.SqlClient;
 
 namespace WDPDY2_Project.Controllers
 {
     public class AccountController : Controller
     {
-        public IActionResult Login()
+        private readonly string _connectionString;
+
+        public AccountController(IConfiguration configuration)
         {
-            return View();
+            _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
-        public IActionResult Register()
+
+        [HttpPost]
+        public IActionResult Register(User model)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                string query = "INSERT INTO Users (Username, Password, RoleID) VALUES (@Username, @Password, @RoleID)";
+
+                using (SqlConnection conn = new SqlConnection(_connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", model.Username);
+                        cmd.Parameters.AddWithValue("@Password", model.Password);
+                        cmd.Parameters.AddWithValue("@RoleID", model.RoleID);
+
+                        try
+                        {
+                            cmd.ExecuteNonQuery();
+                            return RedirectToAction("Login");
+                        }
+                        catch
+                        {
+                            ModelState.AddModelError("", "Registration failed. Please try again.");
+                        }
+                    }
+                }
+            }
+            return View(model);
         }
+
+        [HttpPost]
+        public IActionResult Login(User model)
+        {
+            if (ModelState.IsValid)
+            {
+                string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
+
+                using (SqlConnection conn = new SqlConnection(_connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", model.Username);
+                        cmd.Parameters.AddWithValue("@Password", model.Password);
+
+                        int count = (int)cmd.ExecuteScalar();
+                        if (count > 0)
+                        {
+                            return RedirectToAction("Profile", "Account");
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "Invalid username or password.");
+                        }
+                    }
+                }
+            }
+            return View(model);
+        }
+
         public IActionResult Profile()
         {
             return View();
