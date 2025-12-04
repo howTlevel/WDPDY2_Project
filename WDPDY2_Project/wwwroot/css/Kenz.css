@@ -22,9 +22,9 @@ body {
 }
 
 
-.welcome-header{
-    font-family: Castellar;
-    font-size:large;
-    text-align-last:center;
+.welcome-header {
+    font-family: serif;
+    font-size: 70px;
+    text-align-last: center;
     padding-top: 10px;
 }
