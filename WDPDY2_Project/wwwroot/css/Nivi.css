@@ -3,7 +3,7 @@
 */
 .nivi-page {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     background: #ffffff;
     padding: 3rem;
@@ -16,13 +16,13 @@
 */
 .nivi-intro-bar {
     background: #fff7ef;
-    border-radius: 999px;
+    border-radius: 996px;
     padding: 0.6rem 1.2rem;
     margin-bottom: 2rem;
     font-size: 0.9rem;
-    color: #6b4a2b;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    color: #c19d67;
+    text-align: right;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
 }
 
 /* 
@@ -36,7 +36,7 @@
     align-items: center;
     margin-bottom: 4rem;
     /* hero background image - */
-    background-image: url('images/cozy_cafe.jpg');
+    background-image: url('images/Cozy_Cafe.png');
     background-size: cover;
     background-position: center;
     padding: 3rem;

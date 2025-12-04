@@ -1,0 +1,61 @@
+/* Container styling */
+.container {
+    max-width: 900px;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+    /* Card-like section */
+    .container .p-4 {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+        .container .p-4:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+/* Heading */
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #4C6EF5; /* Indigo tone */
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+p.lead {
+    font-size: 1.2rem;
+    color: #495057;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #dee2e6;
+    margin: 1.5rem 0;
+}
+
+/* Muted text */
+.text-muted {
+    font-size: 0.95rem;
+    color: #adb5bd !important;
+}
+
+/*spacing */
+.mt-4 {
+    margin-top: 2rem !important;
+}
+
+/* Add a subtle background to the whole page */
+body {
+    background: #f8f9fa;
+}
