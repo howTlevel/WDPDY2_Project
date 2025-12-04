@@ -39,6 +39,11 @@ namespace WDPDY2_Project.Controllers
             return View();
         }
 
+        public IActionResult Kenz()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

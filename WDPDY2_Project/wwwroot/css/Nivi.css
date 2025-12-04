@@ -1,0 +1,336 @@
+/* 
+   GLOBAL PAGE LAYOUT
+*/
+.nivi-page {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+}
+
+/* 
+    INTRO BAR
+*/
+.nivi-intro-bar {
+    background: #fff7ef;
+    border-radius: 999px;
+    padding: 0.6rem 1.2rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #6b4a2b;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+/* 
+   HERO SECTION
+ */
+.nivi-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    /* hero background image - */
+    background-image: url('images/cozy_cafe.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    color: #ffffff; /* default light text on hero */
+    overflow: hidden;
+}
+
+    /* Dark overlay over the image */
+    .nivi-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45); /* 0.3–0.6 Dark adjesment  */
+        border-radius: inherit;
+        z-index: 1;
+    }
+
+/* actual content appear ABOVE     overlay */
+.nivi-hero-content,
+.nivi-hero-card {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero text */
+.nivi-title {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+    .nivi-title span {
+        color: #ffd39b; /* warm highlight colour */
+    }
+
+.nivi-subtitle {
+    font-size: 1.1rem;
+    color: #f7f2eb;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+
+.nivi-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nivi-tagline {
+    font-size: 0.95rem;
+    color: #f2e6d9;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/*
+   BUTTONS
+*/
+.nivi-btn {
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.nivi-btn-primary {
+    background: #8b5e34;
+    color: #fff;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+
+    .nivi-btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+    }
+
+.nivi-btn-outline {
+    background: #fff;
+    color: #8b5e34;
+    border-color: #8b5e34;
+}
+
+    .nivi-btn-outline:hover {
+        background: #8b5e34;
+        color: #fff;
+    }
+
+/* 
+   HERO CARD
+ */
+.nivi-hero-card {
+    background: rgba(255, 247, 239, 0.95);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.4);
+    color: #3b281a;
+}
+
+    .nivi-hero-card h2 {
+        margin-bottom: 0.75rem;
+    }
+
+.nivi-special-name {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.nivi-special-desc {
+    font-size: 0.95rem;
+    color: #4a3f38;
+    margin-bottom: 1.2rem;
+}
+
+.nivi-special-note {
+    font-size: 0.85rem;
+    color: #6b5d55;
+}
+
+/* 
+   STATS ROW
+ */
+.nivi-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.nivi-stat {
+    min-width: 110px;
+}
+
+.nivi-stat-number {
+    display: block;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #ffe0a3;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.nivi-stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #f6f0e9;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* ----------------------------------------------------
+   FEATURE CARDS
+---------------------------------------------------- */
+.nivi-section-title {
+    font-size: 1.9rem;
+    margin-bottom: 1.6rem;
+}
+
+.nivi-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.nivi-feature-card {
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    border-top: 4px solid #b4692b;
+    transition: 0.2s ease;
+}
+
+    .nivi-feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    }
+
+/* ----------------------------------------------------
+   MENU PREVIEW SECTION
+---------------------------------------------------- */
+.nivi-menu-preview {
+    margin-top: 3rem;
+    background: linear-gradient(to bottom, #fff7ef, #ffffff);
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.nivi-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Menu card */
+.nivi-menu-item {
+    padding: 1.3rem 1.4rem;
+    border-radius: 1.25rem;
+    background: #faf6f2;
+    border: 1px solid #f0e0d0;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+    /* Drink image */
+    .nivi-menu-item img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 0.6rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .nivi-menu-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    .nivi-menu-item img:hover {
+        transform: scale(1.08);
+        transition: 0.2s ease;
+    }
+
+    .nivi-menu-item h3 {
+        margin-bottom: 0.4rem;
+        font-size: 1.1rem;
+    }
+
+    .nivi-menu-item p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+/* ----------------------------------------------------
+   CTA SECTION
+---------------------------------------------------- */
+.nivi-cta {
+    margin-top: 4rem;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, #8b5e34, #d6a77a);
+    border-radius: 1.5rem;
+    color: #fdfdfd;
+}
+
+.nivi-cta-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.nivi-credit {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* ----------------------------------------------------
+   SMOOTH FADE-IN ANIMATION
+---------------------------------------------------- */
+.nivi-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE TWEAKS
+---------------------------------------------------- */
+@media (max-width: 768px) {
+    .nivi-hero {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .nivi-cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nivi-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* End of Nivi.css */
