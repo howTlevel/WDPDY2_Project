@@ -23,10 +23,16 @@ namespace WDPDY2_Project.Controllers
         }
 
         [HttpPost]
-        public IActionResult Register(User model)
+        public IActionResult Register(RegisterModel model)
         {
             if (ModelState.IsValid)
             {
+                if (model.Password != model.ConfirmPassword)
+                {
+                    ModelState.AddModelError("", "Passwords do not match.");
+                    return View(model);
+                }
+
                 string query = "INSERT INTO [Users] (Username, Password) VALUES (@Username, @Password)";
 
                 using (SqlConnection conn = new SqlConnection(_connectionString))
@@ -59,7 +65,7 @@ namespace WDPDY2_Project.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(User model)
+        public IActionResult Login(LoginModel model)
         {
             if (ModelState.IsValid)
             {
